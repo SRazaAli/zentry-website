@@ -65,10 +65,10 @@ const Navbar = () => {
                 <nav className="flex size-full items-center justify-between p-4">
                     <div className="flex items-center gap-7">
                         <img
-                            src="/img/logo.png"
+                            src="/zentry-website/img/logo.png"
                             alt="logo"
-                            className="w-10"
-                        />
+                            className="w-10" />
+
 
                         <Button
                             id="product-button"
@@ -97,7 +97,7 @@ const Navbar = () => {
 
                             <audio
                                 ref={audioElementRef}
-                                src="/audio/loop.mp3"
+                                src={`${import.meta.env.BASE_URL}audio/loop.mp3`}
                                 loop
                                 className="hidden"
                             />
@@ -105,7 +105,7 @@ const Navbar = () => {
                                 <div
                                     key={bar}
                                     className={`indicator-line ${isIndicatorActive ? 'active' : ''}`}
-                                    style={{ animationDelay: `${bar * 0.01}s` }}
+                                    style={{ animationDelay: `${bar * 0.1}s` }}
                                 />
                             ))}
 
